@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 body{
   margin:0;
+  font-family: 'Press Start 2P', cursive;
+  font-size: small;
 }
 a {
   color: black;
@@ -12,7 +15,7 @@ h1 {
   margin:0;
   padding:20px;
 }
-ol {
+ul {
   border-right:1px solid gray;
   width:100px;
   margin:0;
@@ -22,7 +25,7 @@ ol {
   display:grid;
   grid-template-columns: 150px 1fr;
 }
-#grid ol {
+#grid ul {
   padding-left: 32px;
 }
 #grid #article {
@@ -32,7 +35,7 @@ ol {
   #grid {
     display:block;
   }
-  ol {
+  ul {
     border-right:none;
   }
   h1 {
