@@ -65,6 +65,45 @@
         Noise;
         </pre>
       </p>
+      <h3>SECTION 04</h3>
+      <p>
+        <img src="Ps to Ae.png" height="540" width="960"><br>
+        <pre>
+        [PS to AE]
+        Rasterize;
+        수정이 필요 없을 때 용량을 아끼기 위해서 깨준 상태
+        Layer Mask;
+        검은 부분을 감춘다
+        Smart Object;
+        AE의 Pre-Comp와 같은 기능
+        *Clipping Mask를 사용한 경우
+        Comp로 묶여서 불러옴. Group에 사용한 경우에는 Clipping Mask도 사라져버림
+        각각의 레이어로 가져와서 Matte 등의 기능을 사용
+        *Layer Mask를 사용한 경우
+        Layer Mask 영역 레이어로 가져와서 Matte 기능 사용
+        </pre>
+        <img src="AlphaMatte.gif" height="245" width="480">
+        <img src="LumaMatte.gif" height="245" width="480"><br>
+        <pre>
+        [Alpha Matte, Luma Matte]
+        Matte;
+        내가 원하는 부분만 보여주는 기능
+        Alpha Matte;
+        투명과 불투명 인식 후 어느 쪽을 보여줄지 선택
+        Luma Matte;
+        검정색과 흰색을 인식 후 어느 쪽을 보여줄지 선택
+        *Mask와 Matte의 차이점
+        Mask는 레이어가 하나 줄어드는 반면에 원본 소스를 자유롭게 움직이기 힘듦.
+        Matte는 원본 소스를 자유롭게 움직일 수 있는 반면에 레이어가 늘어남.
+
+        [Set Matte]
+        여러 레이어에 Matte를 줄 때 사용하는 Effect
+        단점은 Mask를 사용하거나 움직이는 레이어는 Comp로 묶어줘야 원활히 사용 가능
+        </pre>
+      </p>
+      <p>
+
+      </p><img src="GRAPE.gif" height="540" width="960">
     </div>
   </div>
 </body>
