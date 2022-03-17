@@ -14,16 +14,16 @@
     </ul>
       <div id="article">
       <h2>After Effects</h2>
-      <h3>SECTION 02</h3>
+      <h3>SECTION 02. 기본 속성을 이용한 애니메이션</h3>
       <p>
-        <img src="mojito.gif" height="400" width="400">
-        <img src="vanilla.gif" height="400" width="400">
-        <img src="wine.gif" height="400" width="400">
+        <img src="mojito.gif" height="360" width="360">
+        <img src="vanilla.gif" height="360" width="360">
+        <img src="wine.gif" height="360" width="360">
       </p>
-      <h3>SECTION 03</h3>
+      <h3>SECTION 03. 쉐입 레이어를 이용한 Fake 3D 애니메이션</h3>
       <p>
-        <img src="WO.gif" height="400" width="400">
-        <img src="MC.gif" height="400" width="400"><br>
+        <img src="WO.gif" height="360" width="360">
+        <img src="MC.gif" height="360" width="360"><br>
         <pre>
         [WO]
         Bevel and Emboss;
@@ -66,7 +66,7 @@
         Noise;
         </pre>
       </p>
-      <h3>SECTION 04</h3>
+      <h3>SECTION 04. 포토샵을 이용한 타이틀 애니메이션</h3>
       <p>
         <img src="Ps to Ae.png" height="540" width="960"><br>
         <pre>
@@ -137,9 +137,10 @@
         스타일 Arc Upper 위쪽만 반응
         </pre>
       </p>
-      <h3>SECTION 05</h3>
+      <h3>SECTION 05. 캘리그래피 스타일의 스트로크 애니메이션</h3>
       <p>
-        <img src="LINE.gif" height="540" width="540"><br>
+        <img src="LINE.gif" height="540" width="540">
+        <img src="TYPE.gif" height="540" width="540"><br>
         <pre>
         [LINE]
         외곽 라인에 애니매이션을 잡는 방법
@@ -149,6 +150,92 @@
         - Shape Layer + Trim Path
         Offset Path;
         Path를 기준으로 범위를 양쪽으로 늘림
+        </pre>
+        <img src="BEAUTYINSIDE.gif" height="270" width="480">
+        <img src="BEAUTYINSIDE2.gif" height="270" width="480"><br>
+        <pre>
+        [Duik]
+        Wiggle;
+        Amplitude 얼마만큼의 반경으로 움직일지
+        Frequency 빠르기
+
+        Blink;
+        보통 Opacity에 사용
+        Value A와 B를 번갈아 보여줌
+
+        Separate Dimensions;
+        Scale을 분리할 때 사용
+
+        Spring;
+        Follow Through
+        Elasticity 탄성
+        Damping 멈추는 속도
+        Smart Interpolation Ease값을 주는 것과 비슷
+        Anticipation 예비동작
+
+        Path point to null
+        Add bones;
+        각 path가 위에 있는 null로 연결됨
+        ㄴ handle을 조정할 수 있지만 null이 많아짐
+
+        [Create Nulls From Paths]
+        handle을 조정할 수 없지만 null 간소화
+
+        [BEAUTY INSIDE]
+        외곽 라인에 애니매이션을 잡는 방법
+        - Solid + Stroke Effect
+        Stroke;
+        Paint Style - On Transparent 선만 이용
+        - Shape Layer + Trim Path
+        Offset Path;
+        Path를 기준으로 범위를 양쪽으로 늘림
+        </pre>
+      </p>
+      <h3>SECTION 06. 익스프레션을 이용한 자동화 애니메이션</h3>
+      <p>
+        <img src="WIGGLE.gif" height="360" width="360">
+        <img src="TIME.gif" height="360" width="360">
+        <img src="LOOPPINGPONG.gif" height="360" width="360">
+        <img src="LOOPCONTINUE.gif" height="360" width="360">
+        <img src="LOOPOFFSET.gif" height="360" width="360">
+        <img src="INTERPOLATION.gif" height="360" width="360"><br>
+        <pre>
+          [EXPRESSION]
+          <Wiggle>
+          Wiggle 효과를 익스프레션으로 재현
+          Position Alt 클릭 wiggle(x,y) x=Frequency y=Amplitude
+          Slider Control  x값에 연결
+
+          <Time>
+          Rotation Alt 클릭 time*숫자 1초에 숫자만큼 회전
+
+          <Loop>
+          loopOut("cycle",0) y = 반복구간
+          시작하는 위치 지정
+          loopIn("cycle",0)
+          끝나는 위치 지정
+          loopOut("pingpong",0)
+          loopOut("continue")
+          마지막 값을 쭉
+          loopOut("offset",0)
+          똑같은 방식으로 반복
+
+          <사칙연산>
+          thisComp.layer("2").transform.xPosition
+          ㄴ컴포지션.레이어.속성
+
+          temp1 = thisComp.layer("2").transform.scale[0];
+          temp1은 레이어2의 스케일 x값
+          temp2 = thisComp.layer("1").transform.scale[0];
+          temp2은 레이어1의 스케일 x값
+          [temp1+temp2, value[1]]
+          value[1]은 기존 y값
+
+          <Interpolation>
+          각 지점과 지점을 어떻게 연결할까
+          전혀 다른 속성들을 연결해서 애니매이션을 동시에 준다
+          linear(r,rMin,rMax,vMin,vMax)
+          r은 참고값의 속성, v는 지금 이 속성
         </pre>
       </p>
     </div>
